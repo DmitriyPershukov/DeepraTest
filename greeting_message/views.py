@@ -6,9 +6,9 @@ def index(request):
     message = request.GET.get('message')
     response = ""
     if (name is None):
-        response += "Parameter name was not provided."
+        response += "<p>Parameter name was not provided.</p>"
     if (message is None):
-        response += "Parameter message was not provided."
+        response += "<p>Parameter message was not provided.</p>"
     if (response == ""):
-        response = "Hello {}! {}!".format(name, message)
+        response = "<p>Hello {}! {}!</p>".format(name, message)
     return HttpResponse(response)
